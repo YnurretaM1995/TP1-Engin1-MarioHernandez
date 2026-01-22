@@ -103,4 +103,12 @@ public class ControlPLayer : MonoBehaviour
             
             return false;
         }
+
+    private void OnCollisionEnter(Collision other)
+    {
+
+        if (other.gameObject.CompareTag("Portal"))
+            gameObject.SetActive(false);
+ 
+    }
 }
