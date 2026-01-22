@@ -6,6 +6,7 @@ public class PortalColision : MonoBehaviour
     [SerializeField]private SceneHandler _nextScene;
     [SerializeField] private Animator _animator;
     [SerializeField] private float _delay = .35f;
+    [SerializeField] private AudioSource _audioSource;
     
     private bool _isTransitioning = false;
     
@@ -28,9 +29,9 @@ public class PortalColision : MonoBehaviour
     private IEnumerator WaitAndChangeScene()
     {
         _isTransitioning = true;
+        AudioManager.instance.PlayPortal(_audioSource);
         
         _animator.SetBool("IsClose", true);
-
         yield return new WaitForSeconds(_delay);
 
         _nextScene.NextScene();

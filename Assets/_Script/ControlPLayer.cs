@@ -19,6 +19,9 @@ public class ControlPLayer : MonoBehaviour
     
     [Header("Animation")] 
         [SerializeField] private Animator _animator;
+    
+    [Header("Sounds")] 
+        [SerializeField] private AudioSource _audioSource;
 
     private void Awake()
     {
@@ -78,7 +81,6 @@ public class ControlPLayer : MonoBehaviour
         
         if (_moveDirection.x > 0)
             transform.rotation = Quaternion.Euler(0, 90, 0); 
-        
         else if (_moveDirection.x < 0)
             transform.rotation = Quaternion.Euler(0, -90, 0);
  
@@ -86,11 +88,11 @@ public class ControlPLayer : MonoBehaviour
     
     public  void OnJump()
         {
-           
             if(!_isGrounded)
                 return;
             _rb.AddForce(new Vector3(0f,_jumpForce,0f),_forceMode);
-       }
+            AudioManager.instance.PlayJump(_audioSource);
+         }
         
     public  bool IsGrounded()
         {
@@ -106,9 +108,8 @@ public class ControlPLayer : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-
         if (other.gameObject.CompareTag("Portal"))
             gameObject.SetActive(false);
- 
+        
     }
 }
