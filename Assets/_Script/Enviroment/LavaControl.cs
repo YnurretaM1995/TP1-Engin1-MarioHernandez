@@ -16,7 +16,8 @@ public class LavaControl : MonoBehaviour
     {
         AudioManager.instance.PlayDeath(_audioSource);
         yield return new WaitForSeconds(_delay);
-        _reloadScene.ReloadScene();
+        
+        LevelManager.instance.ReloadCurrentLevel();
        
     }
 }

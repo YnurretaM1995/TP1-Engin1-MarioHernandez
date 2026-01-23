@@ -391,8 +391,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26aea77c928bb4f41901eb3a88abaa4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Translation: {x: 3, y: 0, z: 0}
+  _speed: 4
+  _limit: 5
+  _translation: {x: 0, y: -5, z: 0}
   _audioSource: {fileID: 7186949027832622359}
+  _Floor1: {fileID: 0}
+  _Floor2: {fileID: 0}
 --- !u!82 &7186949027832622359
 AudioSource:
   m_ObjectHideFlags: 0

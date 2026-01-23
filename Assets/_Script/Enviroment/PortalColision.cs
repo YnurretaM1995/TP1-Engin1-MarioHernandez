@@ -34,6 +34,7 @@ public class PortalColision : MonoBehaviour
         _animator.SetBool("IsClose", true);
         yield return new WaitForSeconds(_delay);
 
-        _nextScene.NextScene();
+        LevelManager.instance.NextLevel();
+            _isTransitioning = false;
     }
 }
