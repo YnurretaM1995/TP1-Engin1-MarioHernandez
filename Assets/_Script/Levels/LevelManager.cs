@@ -65,10 +65,13 @@ public class LevelManager : MonoBehaviour
         }
     }
     
-    //if i want to restart to leve 1
     public void ResetToFirstLevel()
         {
             _currentLevelIndex = 0;
             ReloadCurrentLevel();
         }
+    public static void ResetLevelIndex()
+    {
+        _currentLevelIndex = 0;
+    }
 }
