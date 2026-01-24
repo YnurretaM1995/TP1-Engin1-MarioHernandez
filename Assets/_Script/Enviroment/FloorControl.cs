@@ -5,18 +5,28 @@ public class FloorControl : BaseFloorAction
 {
     [SerializeField] private Vector3 _translation;
     [SerializeField] private AudioSource _audioSource;
-    [SerializeField] private FloorScaleFollower _Floor1;
-    [SerializeField] private FloorScaleFollower _Floor2;
+    [SerializeField] private FloorFollower _Floor1;
+    [SerializeField] private FloorFollower _Floor2;
     
     private void OnCollisionEnter(Collision other)
+    {
+        FloorCollision();
+    }
+    
+    private void OnTriggerEnter(Collider other)
+    {
+        FloorCollision();
+    }
+    
+    public void FloorCollision()
     {
         if (!_isActive)
         {
             if (AudioManager.instance != null)
                 AudioManager.instance.PlayFloor(_audioSource);
-
+    
             StartAction();
-
+    
             if (_Floor1 != null) 
                 _Floor1.StartAction();
             
@@ -24,7 +34,7 @@ public class FloorControl : BaseFloorAction
                 _Floor2.StartAction();
         }
     }
-    
+
     protected override void Update()
     {
         if (_isActive)

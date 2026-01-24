@@ -373,7 +373,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1266,7 +1266,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 603dfd4a8def2c444a0b6acea750fd24, type: 2}
+  - {fileID: 2100000, guid: 712555ee651212c419cb206fb7a0f591, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1519,10 +1519,10 @@ PrefabInstance:
       addedObject: {fileID: 6793805597055583870}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0d7f4b85ad09de146855a140e6e67b89, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6946645215783777424}
+      addedObject: {fileID: 5670407064903485040}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0d7f4b85ad09de146855a140e6e67b89, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5670407064903485040}
+      addedObject: {fileID: 2241169212130317415}
   m_SourcePrefab: {fileID: 100100000, guid: 0d7f4b85ad09de146855a140e6e67b89, type: 3}
 --- !u!1 &8456559321514365131 stripped
 GameObject:
@@ -1646,27 +1646,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
---- !u!65 &6946645215783777424
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8456559321514365131}
-  m_Material: {fileID: 13400000, guid: b579b65cf043b5449b4701cb563674bf, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.65, y: 1.75, z: 0.5}
-  m_Center: {x: 0, y: 0.87, z: 0}
 --- !u!82 &5670407064903485040
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1688,7 +1667,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -1764,6 +1743,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!64 &2241169212130317415
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8456559321514365131}
+  m_Material: {fileID: 13400000, guid: b579b65cf043b5449b4701cb563674bf, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6796121518194019630, guid: fe51a1db8dbe54b4d924541c0e628ca2, type: 3}
 --- !u!4 &9083878411668130417 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0d7f4b85ad09de146855a140e6e67b89, type: 3}

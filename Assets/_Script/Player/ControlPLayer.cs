@@ -85,20 +85,26 @@ public class ControlPLayer : MonoBehaviour
         
     public  bool IsGrounded()
         {
-            Ray ray = new Ray(transform.position, Vector3.down);
-            Debug.DrawRay(ray.origin, ray.direction*_distanceToGround, Color.red);
-            _animator.SetBool("IsGrounded", _isGrounded);
-    
-            if (Physics.Raycast(ray, _distanceToGround, _groundMask))
-                return true;
+            Vector3 origin = transform.position + Vector3.up * 0.1f;
+            float totalDistance = _distanceToGround + 0.1f;
+
+            bool grounded = Physics.Raycast(origin, Vector3.down, totalDistance, _groundMask);
             
-            return false;
+            Debug.DrawRay(origin, Vector3.down * totalDistance, Color.red);
+            _animator.SetBool("IsGrounded", grounded);
+
+            return grounded;
         }
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Portal"))
+        if (other.gameObject.CompareTag("Portal") || other.gameObject.CompareTag("Lava"))
             gameObject.SetActive(false);
-        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Lava"))
+            gameObject.SetActive(false);
     }
 }

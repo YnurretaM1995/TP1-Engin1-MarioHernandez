@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FloorScaleFollower : BaseFloorAction
+public class FloorFollower : BaseFloorAction
 {
     [SerializeField] private Vector3 _scaleDirection; 
 
