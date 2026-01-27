@@ -22,6 +22,10 @@ public class ControlPLayer : MonoBehaviour
     
     [Header("Sounds")] 
         [SerializeField] private AudioSource _audioSource;
+    
+    [Header("Reference")] 
+        [SerializeField] private Camera _camera;
+         private Vector3 _playerPosition;
 
     private void Awake()
     {
@@ -31,11 +35,20 @@ public class ControlPLayer : MonoBehaviour
             _rb = GetComponent<Rigidbody>();
         if (!_animator)
             _animator = GetComponent<Animator>();
+        if (!_camera)
+            _camera = GetComponent<Camera>();
     }
 
     private void FixedUpdate()
     {
         MoveFixed();
+        CameraPosition();
+    }
+
+    private void CameraPosition()
+    {
+        _playerPosition = transform.position;
+        _camera.transform.position = new Vector3(_playerPosition.x +2, _playerPosition.y+2, _playerPosition.z - 4);
     }
 
     private void Update()
