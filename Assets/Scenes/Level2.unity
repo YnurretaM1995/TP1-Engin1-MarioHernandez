@@ -2459,7 +2459,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1615320545427854087, guid: 9d3453d50d1014f49b29f535c5eb51cc, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1627925607908618386, guid: 9d3453d50d1014f49b29f535c5eb51cc, type: 3}
       propertyPath: m_LocalScale.x
@@ -4438,6 +4438,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3497680815659814423, guid: 1a0ea7254961f2e498af3e811fddc814, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5292785195628612991, guid: 1a0ea7254961f2e498af3e811fddc814, type: 3}
+      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -9868,7 +9872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1615320545427854087, guid: 9d3453d50d1014f49b29f535c5eb51cc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1996403635013957271, guid: 9d3453d50d1014f49b29f535c5eb51cc, type: 3}
       propertyPath: _jumpForce
