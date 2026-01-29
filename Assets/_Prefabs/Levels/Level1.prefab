@@ -1130,6 +1130,7 @@ Transform:
   - {fileID: 604298775142096659}
   - {fileID: 9000549063767081341}
   - {fileID: 790036827958865290}
+  - {fileID: 1582283593933434881}
   - {fileID: 9083878411668130417}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1578,6 +1579,72 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &7023286485753888772
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4886414249031909383}
+    m_Modifications:
+    - target: {fileID: 5995309272590874675, guid: 1ac7cf70446faea4cb4fe7ce21f130ad, type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 8895124444832336571}
+    - target: {fileID: 8395518201160347653, guid: 1ac7cf70446faea4cb4fe7ce21f130ad, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395518201160347653, guid: 1ac7cf70446faea4cb4fe7ce21f130ad, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395518201160347653, guid: 1ac7cf70446faea4cb4fe7ce21f130ad, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395518201160347653, guid: 1ac7cf70446faea4cb4fe7ce21f130ad, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395518201160347653, guid: 1ac7cf70446faea4cb4fe7ce21f130ad, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395518201160347653, guid: 1ac7cf70446faea4cb4fe7ce21f130ad, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395518201160347653, guid: 1ac7cf70446faea4cb4fe7ce21f130ad, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395518201160347653, guid: 1ac7cf70446faea4cb4fe7ce21f130ad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395518201160347653, guid: 1ac7cf70446faea4cb4fe7ce21f130ad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395518201160347653, guid: 1ac7cf70446faea4cb4fe7ce21f130ad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9207908496996919999, guid: 1ac7cf70446faea4cb4fe7ce21f130ad, type: 3}
+      propertyPath: m_Name
+      value: Heimer Player
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1ac7cf70446faea4cb4fe7ce21f130ad, type: 3}
+--- !u!4 &1582283593933434881 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8395518201160347653, guid: 1ac7cf70446faea4cb4fe7ce21f130ad, type: 3}
+  m_PrefabInstance: {fileID: 7023286485753888772}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8762547145932598682
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1645,6 +1712,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0d7f4b85ad09de146855a140e6e67b89, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d7f4b85ad09de146855a140e6e67b89, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0d7f4b85ad09de146855a140e6e67b89, type: 3}
       propertyPath: m_TagString
@@ -1750,6 +1821,7 @@ MonoBehaviour:
   _animator: {fileID: 4683518547674473805}
   _audioSource: {fileID: 5670407064903485040}
   _camera: {fileID: 8895124444832336571}
+  _particleSystem: {fileID: 5292785195628612991, guid: 1a0ea7254961f2e498af3e811fddc814, type: 3}
 --- !u!114 &440352421355464752
 MonoBehaviour:
   m_ObjectHideFlags: 0

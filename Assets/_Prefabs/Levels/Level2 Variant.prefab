@@ -529,6 +529,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tramp
       objectReference: {fileID: 0}
+    - target: {fileID: 5795363589214304952, guid: 6108f7629489a9c45a8d2ff7a4519ad6, type: 3}
+      propertyPath: m_TagString
+      value: Tramp
+      objectReference: {fileID: 0}
     - target: {fileID: 6568100754314862594, guid: 6108f7629489a9c45a8d2ff7a4519ad6, type: 3}
       propertyPath: m_LocalScale.y
       value: 5.2999997
@@ -646,7 +650,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4583050478347869607, guid: 232d3c5b3a043064b866885d1e1f5901, type: 3}
       propertyPath: m_Name
-      value: Level2.1 Variant
+      value: Level2 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4886414249031909383, guid: 232d3c5b3a043064b866885d1e1f5901, type: 3}
       propertyPath: m_LocalPosition.x
@@ -799,6 +803,10 @@ PrefabInstance:
     - target: {fileID: 5795363589214304952, guid: 6108f7629489a9c45a8d2ff7a4519ad6, type: 3}
       propertyPath: m_Name
       value: Tramp 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795363589214304952, guid: 6108f7629489a9c45a8d2ff7a4519ad6, type: 3}
+      propertyPath: m_TagString
+      value: Tramp
       objectReference: {fileID: 0}
     - target: {fileID: 6568100754314862594, guid: 6108f7629489a9c45a8d2ff7a4519ad6, type: 3}
       propertyPath: m_LocalScale.x

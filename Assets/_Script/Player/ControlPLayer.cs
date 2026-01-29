@@ -25,6 +25,7 @@ public class ControlPLayer : MonoBehaviour
     
     [Header("Reference")] 
         [SerializeField] private Camera _camera;
+        [SerializeField] private ParticleSystem _particleSystem;
          private Vector3 _playerPosition;
 
     private void Awake()
@@ -48,7 +49,7 @@ public class ControlPLayer : MonoBehaviour
     private void CameraPosition()
     {
         _playerPosition = transform.position;
-        _camera.transform.position = new Vector3(_playerPosition.x +2, _playerPosition.y+2, _playerPosition.z - 4);
+        _camera.transform.position = new Vector3(_playerPosition.x +1, _playerPosition.y+1, _playerPosition.z - 4);
     }
 
     private void Update()
@@ -111,13 +112,24 @@ public class ControlPLayer : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Portal") || other.gameObject.CompareTag("Lava"))
+        if ( other.gameObject.CompareTag("Portal"))
             gameObject.SetActive(false);
+        
+        if ( other.gameObject.CompareTag("Lava")|| other.gameObject.CompareTag("Tramp"))
+        {
+            _particleSystem.transform.position = transform.position;
+            _particleSystem.Play();
+            gameObject.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Lava"))
+        {
+            _particleSystem.transform.position = transform.position;
+            _particleSystem.Play();
             gameObject.SetActive(false);
+        }
     }
 }
