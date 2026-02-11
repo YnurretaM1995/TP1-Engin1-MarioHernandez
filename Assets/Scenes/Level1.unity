@@ -2004,6 +2004,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 1745570115455133429, guid: 232d3c5b3a043064b866885d1e1f5901, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9be2c272a29f67d47894f157312bd363, type: 2}
     - target: {fileID: 3622063834149943351, guid: 232d3c5b3a043064b866885d1e1f5901, type: 3}
       propertyPath: _particleSystem
       value: 
