@@ -37,23 +37,28 @@ public class FloorControl : BaseFloorAction
 
     protected override void Update()
     {
+        FloorMovement();
+    }
+
+    private void FloorMovement()
+    {
         if (_isActive)
         {
             float distance = Vector3.Distance(_initialPosition, transform.position);
             float progress = Mathf.Clamp01(distance / _limit);
             
-             if (distance < _limit)
-             {
-                 transform.Translate(_translation * _speed * Time.deltaTime);
+            if (distance < _limit)
+            {
+                transform.Translate(_translation * _speed * Time.deltaTime);
 
-                 if (_Floor1 != null)
-                     _Floor1.UpdateScaleProgress(progress);
-                 if (_Floor2 != null)
-                     _Floor2.UpdateScaleProgress(progress);
-             }
+                if (_Floor1 != null)
+                    _Floor1.UpdateScaleProgress(progress);
+                if (_Floor2 != null)
+                    _Floor2.UpdateScaleProgress(progress);
+            }
              
-             else
-                 StopAction();
+            else
+                StopAction();
              
         }
     }

@@ -899,7 +899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1615320545427854087, guid: 9d3453d50d1014f49b29f535c5eb51cc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1996403635013957271, guid: 9d3453d50d1014f49b29f535c5eb51cc, type: 3}
       propertyPath: _particleSystem
@@ -9884,7 +9884,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1615320545427854087, guid: 9d3453d50d1014f49b29f535c5eb51cc, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1996403635013957271, guid: 9d3453d50d1014f49b29f535c5eb51cc, type: 3}
       propertyPath: _jumpForce

@@ -46,6 +46,7 @@ public class AudioManager : MonoBehaviour
         audioSource.clip = _Floor;
         audioSource.outputAudioMixerGroup = _SFX;
         audioSource.Play(); 
+        
     }
     
     public void PlayMenu(AudioSource audioSource)
