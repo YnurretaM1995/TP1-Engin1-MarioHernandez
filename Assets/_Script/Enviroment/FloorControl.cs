@@ -18,23 +18,6 @@ public class FloorControl : BaseFloorAction
         FloorCollision();
     }
     
-    public void FloorCollision()
-    {
-        if (!_isActive)
-        {
-            if (AudioManager.instance != null)
-                AudioManager.instance.PlayFloor(_audioSource);
-    
-            StartAction();
-    
-            if (_Floor1 != null) 
-                _Floor1.StartAction();
-            
-            if (_Floor2 != null) 
-                _Floor2.StartAction();
-        }
-    }
-
     protected override void Update()
     {
         FloorMovement();
@@ -60,6 +43,22 @@ public class FloorControl : BaseFloorAction
             else
                 StopAction();
              
+        }
+    }
+    public void FloorCollision()
+    {
+        if (!_isActive)
+        {
+            if (AudioManager.instance != null)
+                AudioManager.instance.PlayFloor(_audioSource);
+    
+            StartAction();
+    
+            if (_Floor1 != null) 
+                _Floor1.StartAction();
+            
+            if (_Floor2 != null) 
+                _Floor2.StartAction();
         }
     }
 }
