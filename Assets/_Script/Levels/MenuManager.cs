@@ -62,4 +62,8 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         CheckLevelProgress();
     }
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }

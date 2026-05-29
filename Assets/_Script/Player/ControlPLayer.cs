@@ -49,7 +49,7 @@ public class ControlPLayer : MonoBehaviour
     private void CameraPosition()
     {
         _playerPosition = transform.position;
-        _camera.transform.position = new Vector3(_playerPosition.x +1, _playerPosition.y+1, _playerPosition.z - 4);
+        _camera.transform.position = new Vector3(_playerPosition.x +1, _playerPosition.y+1, _playerPosition.z - 5);
     }
 
     private void Update()
